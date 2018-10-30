@@ -1,11 +1,11 @@
 ---
-title: "Holy cow!"
+title: "Shuwei Liu"
 output:
   html_document: 
     toc: true
     toc_float: true
 ---
 
-### I have a webpage!
+## About "Me"
 
-And I can put all kinds of stuff on it!
+I am a graduate student in [Columbia University Mailman School of Public Health](https://www.mailman.columbia.edu) and focus on Statistical Genetics. Before that, I received my undergraduate degree in Biological Sciences from Shandong University in China. I believe you will know more about me by looking through my recent [cv](cv.html).

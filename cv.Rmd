@@ -1,0 +1,12 @@
+---
+title: "CV"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+<img src="./cv/CV-2018.pdf" alt="some text"  width="4200" height="4200">
+
