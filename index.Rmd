@@ -10,11 +10,9 @@ output:
 
 I am a graduate student in [Columbia University Mailman School of Public Health](https://www.mailman.columbia.edu) and focus on Statistical Genetics. Before that, I received my undergraduate degree in Biological Sciences from Shandong University in China. I believe you will know more about me by looking through my recent [cv](cv.html).
 
-I like travelling and photograghy although I do not own a camera. 
+I like travelling and photograghy although I do not own a camera ❤️.
 
-In relationship with "MR. SOMEONE" ❤️.
-
-<img src = "./images/JS1A6159.jpg" style = "width:105%">
+<img src = "./images/JS1A6159.jpg" style = "width:90%">
 
 ## Flexdashboard
 
