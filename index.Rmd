@@ -16,3 +16,7 @@ In relationship with "MR. SOMEONE" ❤️.
 
 <img src = "./images/JS1A6159.jpg" style = "width:105%">
 
+## Flexdashboard
+
+Here's the [flexdashboard](flexdashboard.html) of problem2.
+

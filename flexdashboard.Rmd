@@ -1,0 +1,59 @@
+---
+title: "flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r import_data}
+data("ny_noaa")
+ny_noaa_tidy = 
+  ny_noaa %>%
+  janitor::clean_names() %>% 
+  separate(date, into = c("year", "month", "date"), sep = "-") %>%
+  mutate(prcp = as.numeric(prcp)/10, tmax = as.numeric(tmax)/10, tmin = as.numeric(tmin)/10)
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Changes of tmax on January every year
+
+```{r column_a}
+ny_noaa_tidy %>% 
+  select(id, year, month, tmax) %>% 
+  filter(month == "01") %>% 
+  plot_ly(y = ~tmax, color = ~year, type = "box")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Average precipitation of each month (id : US1NYAB0001)
+
+```{r column_b}
+ny_noaa_tidy %>% 
+  filter(id == "US1NYAB0001") %>% 
+  group_by(id, month) %>% 
+  summarize(prcp_mean = mean(prcp, na.rm = TRUE)) %>%
+  plot_ly(x = ~month, y = ~prcp_mean, color = ~month, type = "bar")
+```
+
+### Relation between snow and precipation of "US1NYAB0001"
+
+```{r column_c}
+ny_noaa_tidy %>%
+  filter(id == "US1NYAB0001", !is.na(snow), !is.na(prcp), snow < 400, snow > 0) %>% 
+  arrange(snow) %>% 
+  plot_ly(y = ~snow, x = ~prcp, color = ~year, type = "scatter", mode = "markers", text = ~year)
+```
+
