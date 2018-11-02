@@ -18,3 +18,6 @@ I like travelling and photograghy although I do not own a camera ❤️.
 
 Here's the [flexdashboard](flexdashboard.html) of problem2.
 
+## Repo link
+
+You can find the [repo](https://github.com/Shuwei1024/Shuwei1024.github.io.git) of homework4 here.
